@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import React, { Component } from "react";
+import { Provider } from "react-redux";
+import { ConnectedRouter } from "react-router-redux";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Dashboard from "../containers/Dashboard";
 import WebClock from "../containers/WebClock";
 import TimeCard from "../containers/TimeCard";

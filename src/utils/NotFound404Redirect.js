@@ -6,7 +6,7 @@ class NotFound404Redirect extends Component {
   }
 
   render() {
-    return <div>We're sorry, but the page you requested can not be found.</div>
+    return <div>Page not found</div>
   }
 }
 
