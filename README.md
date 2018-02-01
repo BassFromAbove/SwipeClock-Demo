@@ -11,5 +11,7 @@ Requires
 
 ## Run
 
-```json-server
-yarn run dev```
+```
+json-server
+yarn run dev
+```
