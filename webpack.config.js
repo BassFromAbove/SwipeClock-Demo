@@ -9,6 +9,7 @@ module.exports = {
    resolve: {
       extensions: ['.js']
    },
+  devtool: 'cheap-module-eval-source-map',
    module: {
       rules: [
          {
@@ -25,7 +26,11 @@ module.exports = {
       ]
    },
 	devServer: {
+    historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
    	contentBase: './src',
-   	publicPath: '/output'
+   	publicPath: '/output/'
 	}
 };
