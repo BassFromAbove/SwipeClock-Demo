@@ -10,16 +10,7 @@ Requires
 * Yarn
 * json-server
 
-### webpack-dav-server
+## Run
 
-```yarn run dev```
-
-
-### json-server
-
-```yarn add --global json-server
-
-json-server```
-
-
-
+```json-server
+yarn run dev```
