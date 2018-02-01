@@ -2,9 +2,7 @@
 
 A demonstration of using React to create a simple single page application.
 
-## Install
-
-Requires
+## Requires
 
 * node.js
 * yarn
