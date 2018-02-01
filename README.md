@@ -6,12 +6,14 @@ A demonstration of using React to create a simple single page application.
 
 * node.js
 * yarn
-* json-server
 
 ## Build and Run
 
 ```
-json-server
+yarn global add json-server
+cd root/data
+json-server db.json
+cd root/
 yarn run dev
 http://localhost:8080
 ```
