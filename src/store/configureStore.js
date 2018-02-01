@@ -1,9 +1,9 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
-import { apiMiddleware } from 'redux-api-middleware'
-import thunk from 'redux-thunk'
-import logger from 'redux-logger'
-import rootReducer from '../reducers'
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-redux";
+import { apiMiddleware } from "redux-api-middleware";
+import thunk from "redux-thunk"
+import logger from "redux-logger"
+import rootReducer from "../reducers"
 
 export default function configureStore( initialState, history ) {
 
@@ -11,7 +11,9 @@ export default function configureStore( initialState, history ) {
 
 	const middleWares = [
 		routerMW,
-		thunk
+		thunk,
+		apiMiddleware,
+		logger
 	];
 
 	const enhancers = [
@@ -24,6 +26,7 @@ export default function configureStore( initialState, history ) {
 			? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 			: compose;
 
+	console.log( "rootReducer IS:" ); console.log( rootReducer );
 	const store = createStore(
 		combineReducers( {
 			rootReducer,
