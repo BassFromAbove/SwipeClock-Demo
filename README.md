@@ -6,8 +6,7 @@ A demonstration of using React to create a simple single page application.
 
 Requires
 
-* webpack
-* Yarn
+* yarn
 * json-server
 
 ## Run
