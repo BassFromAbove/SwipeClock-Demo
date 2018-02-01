@@ -8,9 +8,10 @@ A demonstration of using React to create a simple single page application.
 * yarn
 * json-server
 
-## Run
+## Build and Run
 
 ```
 json-server
 yarn run dev
+http://localhost:8080
 ```
