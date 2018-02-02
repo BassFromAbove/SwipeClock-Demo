@@ -27,9 +27,6 @@ class Dashboard extends Component {
 	render() {
 		return(
 			<div>
-				<div>Dashboard</div>
-				<button onClick={this.gotoSchedule}>Go to schedule</button>
-				<button onClick={this.clickGetData}>Fail data</button>
 				<DashboardList
 					data={this.props.data}
 					isGettingData={this.props.isGettingData}
