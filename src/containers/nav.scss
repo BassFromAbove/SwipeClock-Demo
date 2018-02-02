@@ -1,0 +1,23 @@
+.nav {
+	width: 200px;
+	height: 100%;
+	padding-top: 20px;
+	vertival-align: top;
+	background-color: #262E41;
+
+	&__row {
+		padding: 10px;
+	}
+
+	&__link {
+		font-size: 14 px;
+		text-decoration: none;
+		&:visited {
+			color: #DDD;
+		}
+
+		&--active {
+			background-color: white;
+		}
+	}
+}

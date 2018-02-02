@@ -1,0 +1,12 @@
+.topBar {
+
+ 	border-bottom: 1px solid gray;
+ 	width: 100%;
+ 	text-align: right;
+ 	height: 60px;
+
+	&__text {
+		line-height: 3.75;
+		padding-right: 35px;
+	}
+}

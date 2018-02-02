@@ -26,7 +26,6 @@ export default function configureStore( initialState, history ) {
 			? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 			: compose;
 
-	console.log( "rootReducer IS:" ); console.log( rootReducer );
 	const store = createStore(
 		combineReducers( {
 			rootReducer,

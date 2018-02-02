@@ -1,0 +1,10 @@
+.app {
+	display: flex;
+	height: 100%;
+
+
+	&__content {
+		flex: 1 0 auto;
+	}
+
+}
