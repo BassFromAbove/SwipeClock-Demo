@@ -3,7 +3,7 @@ import fonts from 'font-awesome/css/font-awesome.min.css';
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+console.log( fonts );
 const SideBar = props => (
 	<div className={styles.nav}>
 		<NavLink
@@ -11,7 +11,7 @@ const SideBar = props => (
 			className={styles.nav__link}
 			to="/dashboard"
 		>
-			<span className={fonts.fas, fonts.faTachometerAlt}></span>
+			<span className={`${fonts.fa}  ${fonts[ "fa-tachometer" ]}`}></span>
 			Dashboard
 		</NavLink>
 		<NavLink activeClassName={styles.active} className={styles.nav__link} to="/webclock">WebClock</NavLink>

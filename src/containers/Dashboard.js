@@ -8,16 +8,11 @@ class Dashboard extends Component {
 
 	constructor( props ) {
 		super( props );
-		this.gotoSchedule = this.gotoSchedule.bind( this );
 		this.clickGetData = this.clickGetData.bind( this );
 	}
 
 	componentWillMount() {
 		this.props.getData( QUERY_TYPE.userTimeSummary );
-	}
-
-	gotoSchedule() {
-		this.props.push( "/schedule" );
 	}
 
 	clickGetData() {
