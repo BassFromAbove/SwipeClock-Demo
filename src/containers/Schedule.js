@@ -1,26 +1,41 @@
+import styles from "./schedule.scss"
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { push } from 'react-router-redux'
+import { getData, QUERY_TYPE, setHamburgered } from "../actions";
+import ScheduleList from "../components/ScheduleList";
 
 class Schedule extends Component {
 
 	constructor( props ) {
 		super( props );
-		this.gotoDashboard = this.gotoDashboard.bind( this );
 	}
 
-	gotoDashboard() {
-		this.props.push( "/dashboard" );
+	componentWillMount() {
+		this.props.getData( QUERY_TYPE.userTimeSummary );
+		this.props.getData( QUERY_TYPE.userScheduleSummary );
+		this.props.getData( QUERY_TYPE.jobs );
 	}
 
 	render() {
 		return(
-			<div>
-				<div>Schedule</div>
-				<button onClick={this.gotoDashboard}>Go to dashboard</button>
+			<div className={styles.schedule}>
+				<ScheduleList
+					time={this.props.data.time}
+					schedules={this.props.data.scheduleSummary}
+					jobs={this.props.data.jobs}
+					isGettingData={this.props.isGettingData}
+					getDataFailed={this.props.getDataFailed}
+				/>
 			</div>
 		);
 	}
 }
 
-export default connect( null, { push } )(Schedule)
+const mapStateToProps = ( state ) => ( {
+	data: state.data,
+	isGettingData: state.isGettingData,
+	getDataFailed: state.getDataFailed
+} )
+
+export default connect( mapStateToProps, { getData, setHamburgered } )(Schedule)

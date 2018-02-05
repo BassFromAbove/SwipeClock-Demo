@@ -4,7 +4,8 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'output'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: "http://localhost:8080/output/"
   },
   resolve: {
     extensions: ['.js']
@@ -37,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+        loader: "url-loader?limit=10000&mimetype=application/font-woff&name=./[hash].[ext]"
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
