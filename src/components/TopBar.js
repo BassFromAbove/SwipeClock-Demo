@@ -15,7 +15,7 @@ const TopBar = props => (
 			<div className={styles.topBar__text}>Time Card</div>
       )} />
 		<Route path="/schedule" render={props => (
-			<div className={styles.topBar__text}>schedule</div>
+			<div className={styles.topBar__text}>Schedule</div>
       )} />
 	</div>
 )
