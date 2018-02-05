@@ -4,7 +4,8 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'output'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: "http://localhost:8080/output/"
   },
   resolve: {
     extensions: ['.js']

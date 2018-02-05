@@ -1,10 +1,50 @@
+$grid-cell-border: 1px solid #AAA;
+
+:global {
+	.global__spinner {
+		text-align: center;
+		position: relative;
+		top: 45%;
+	}
+
+	.grid__row{
+		display: flex;
+
+		&--header{
+			display: flex;
+			border-top: $grid-cell-border;
+			border-bottom: $grid-cell-border;
+		}
+		&:last-child {
+			border-bottom: $grid-cell-border;
+		}
+	}
+
+	.grid__cell {
+		flex: 1;
+		border-left: $grid-cell-border;
+		padding: 4px 8px;
+		font-size: 12px;
+		font-family: "courier new" !important;
+
+		&:last-child {
+			flex: 1;
+			border-left: $grid-cell-border;
+			border-right: $grid-cell-border;
+		}
+	}
+
+}
+
 .app {
 	display: flex;
 	height: 100%;
 
-
-	&__content {
+	&__right-side {
 		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
 	}
 
 }
+

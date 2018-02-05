@@ -28,7 +28,7 @@ export default function configureStore( initialState, history ) {
 
 	const store = createStore(
 		combineReducers( {
-			rootReducer,
+			...rootReducer,
 			router: routerReducer
 		} ),
 		initialState,

@@ -1,27 +1,30 @@
+import styles from "./Dashboard.scss";
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { push } from "react-router-redux";
-import { getData,QUERY_TYPE } from "../actions";
+import { getData, QUERY_TYPE, setHamburgered } from "../actions";
 import DashboardList from "../components/DashboardList";
 
 class Dashboard extends Component {
 
 	constructor( props ) {
 		super( props );
-		this.clickGetData = this.clickGetData.bind( this );
 	}
 
 	componentWillMount() {
-		this.props.getData( QUERY_TYPE.userTimeSummary );
+		this.props.getData( QUERY_TYPE.time );
+		this.props.getData( QUERY_TYPE.schedule );
+		this.props.getData( QUERY_TYPE.users );
+		this.props.getData( QUERY_TYPE.jobs );
 	}
 
-	clickGetData() {
-		this.props.getData( QUERY_TYPE.failQuery );
+	componentDidMount() {
+		this.props.setHamburgered( false );
 	}
 
 	render() {
 		return(
-			<div>
+			<div className={styles.dashboard}>
 				<DashboardList
 					data={this.props.data}
 					isGettingData={this.props.isGettingData}
@@ -33,9 +36,9 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = ( state ) => ( {
-	data: state.rootReducer.data,
-	isGettingData: state.rootReducer.isGettingData,
-	getDataFailed: state.rootReducer.getDataFailed
+	data: state.data,
+	isGettingData: state.isGettingData,
+	getDataFailed: state.getDataFailed
 } )
 
-export default connect( mapStateToProps, { push, getData } )(Dashboard)
+export default connect( mapStateToProps, { getData, setHamburgered } )(Dashboard)

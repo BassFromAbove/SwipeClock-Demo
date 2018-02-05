@@ -9,7 +9,6 @@ import createHistory from 'history/createBrowserHistory'
 const history = createHistory();
 const store = configureStore( {}, history );
 
-console.log( "styles:" ); console.log( styles );
 render(
 	<App store={store} history={history} />,
 	document.getElementById('appRoot')

@@ -4,7 +4,7 @@
       "id": 1,
       "userId": 1,
       "date": "01/01/2001",
-      "job Number": 2,
+      "jobId": 2,
       "in": "08:00",
       "out": "18:00",
       "total hours": 8
@@ -13,7 +13,7 @@
       "id": 2,
       "userId": 1,
       "date": "02/01/2001",
-      "job Number": 2,
+      "jobId": 2,
       "in": "07:30",
       "out": "17:30",
       "total hours": 8
@@ -22,7 +22,7 @@
       "id": 3,
       "userId": 2,
       "date": "01/02/2001",
-      "job Number": 2,
+      "jobId": 2,
       "in": "05:30",
       "out": "17:30",
       "total hours": 10
@@ -34,7 +34,7 @@
       "userId": 1,
       "begin": "01/02/2018",
       "end": "01/03/2018",
-      "job Number": 3
+      "jobId": 3
     }
   ],
   "jobs": [

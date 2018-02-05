@@ -10,6 +10,7 @@ A demonstration of using React to create a simple single page application.
 ## Build and Run
 
 ```
+yarn
 yarn global add json-server
 ```
 
