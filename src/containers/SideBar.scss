@@ -2,7 +2,7 @@ $link-color: #BBB;
 $active-color: #F7F7F7;
 $background-color: #262E41;
 $large-breakpoint: 1024px;
-$medium-breakpoint: 768px;
+$medium-breakpoint: 600px;
 
 .nav {
 	padding: initial;
@@ -27,21 +27,29 @@ $medium-breakpoint: 768px;
 
 		@media screen and (max-width: $large-breakpoint) {
 			position: absolute;
+			overflow: hidden;
 			top: 0;
 			left: 0;
 			height: 100%;
 			padding-top: 0;
+			transition: width .5s ease-in-out;
+		}
+
+		&--hamburgered {
+			@media screen and (max-width: $large-breakpoint) {
+				width: 280px
+			}
 		}
 
 		&:not(&--hamburgered) {
 			@media screen and (max-width: $large-breakpoint) {
-				display: none;
+				width: 0px
 			}
 		}
 
 		@media screen and (max-width: $medium-breakpoint) {
 			position: absolute;
-			widht: 100%;
+			width: 100%;
 			top: 0;
 			left: 0;
 		}
@@ -81,6 +89,8 @@ $medium-breakpoint: 768px;
 		font-size: 17px;
 		text-decoration: none;
 		color: $link-color;
+		border-right: 2px solid $background-color;
+		white-space: nowrap;
 		&:visited {
 			color: $link-color;
 		}
