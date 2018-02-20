@@ -107,6 +107,16 @@ const login = ( state = initialState.login, { type, payload } ) => {
   return( state );
 }
 
+console.log( combineReducers( {
+  ping,
+  data,
+  isGettingData,
+  getDataFailed,
+  hamburgered,
+  webclock,
+  login
+} ) )
+
 export default {
   ping,
   data,
